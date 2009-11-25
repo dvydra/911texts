@@ -5,8 +5,8 @@
     <title></title>
 </head>
 <body>
-<form action="/import" method="POST">
-    <input name="file" type="text"></input>
-</form>
+       #{list items:things, as:'m'}
+            <li>${m.body}</li>
+       #{/list}
 </body>
 </html>

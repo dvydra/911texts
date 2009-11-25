@@ -5,7 +5,8 @@
 # Home page
 GET     /                                       Application.index
 GET     /upload                                 Application.uploadFile
-POST    /import                                 Application.importFile
+POST    /import                               Application.importFile
+GET     /list                                   Application.listAll
 
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public

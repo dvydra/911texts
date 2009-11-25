@@ -1,9 +1,0 @@
-25 Nov 2009 21:49:40,115 INFO  ~ Starting /Users/dvydra/Projects/911texts
-25 Nov 2009 21:49:40,123 INFO  ~ Module test-runner is available (/Users/dvydra/Projects/play-1.0/modules/test-runner)
-25 Nov 2009 21:49:40,273 INFO  ~ 
-25 Nov 2009 21:49:40,273 INFO  ~ Go to http://localhost:9000/@tests to run the tests
-25 Nov 2009 21:49:40,274 INFO  ~ 
-25 Nov 2009 21:49:40,274 WARN  ~ You're running Play! in DEV mode
-25 Nov 2009 21:49:40,396 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-25 Nov 2009 21:49:46,715 INFO  ~ Connected to jdbc:hsqldb:mem:playembed
-25 Nov 2009 21:49:46,815 INFO  ~ Application '911 texts' is now started !
