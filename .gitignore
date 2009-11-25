@@ -1,1 +1,3 @@
 tmp/
+war/WEB-INF/appengine-generated/
+test-result/
