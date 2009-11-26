@@ -5,8 +5,9 @@
     <title></title>
 </head>
 <body>
-<form action="/import" method="POST">
-    <input name="file" type="text"></input>
+<form action="/import" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+    <input type="file" name="messagefile" />
+    <input type="submit" />
 </form>
 </body>
 </html>

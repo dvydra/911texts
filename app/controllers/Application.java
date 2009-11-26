@@ -6,11 +6,8 @@ import siena.PersistenceManager;
 import siena.Query;
 import siena.gae.GaePersistenceManager;
 import siena.jdbc.JdbcPersistenceManager;
-import utils.PlayConnectionManager;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.ParseException;
@@ -37,17 +34,30 @@ public class Application extends Controller {
         render(things);
     }
 
-    public static void importFile(String file) throws IOException, ParseException {
-        URL url = new URL(file);
-        URLConnection yc = url.openConnection();
-        BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
-        String inputLine;
-
+    public static void importFile(File messagefile) throws IOException, ParseException {
+        BufferedReader in = new BufferedReader(new FileReader(messagefile));
+        String inputLine;   
+        List<String> failed = new ArrayList<String>();
+        int i = 0;
+        int failCount = 0;
         while ((inputLine = in.readLine()) != null) {
+            if (i % 1000 == 0) {
+                System.out.println(String.format("processed %d messages - %d failed", i, failCount));
+            }
+
             Message message = extractMessage(inputLine);
-            message.insert();
+            if (message != null) {
+                message.insert();
+            } else {
+                failed.add(("FAILED TO PARSE LINE>"+ inputLine +""));
+                failCount++;
+            }
+            i++;
         }
         in.close();
+        for (String l : failed) {
+            System.out.println(l);    
+        }
     }
 
     public static Message extractMessage(String inputLine) throws ParseException {
