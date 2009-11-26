@@ -64,10 +64,10 @@ public class Application extends Controller {
         Message message = null;
         String regex =  "(\\d\\d\\d\\d-\\d\\d-\\d\\d \\d\\d:\\d\\d:\\d\\d)\\s+" +      //date
                         "(\\w+)\\s+" +                                                 //network
-                        "[\\[{]([\\d\\?]+)[\\]}]( \\d:\\d\\d:\\d\\d [AP]M)?\\s+" +                                //messageId
+                        "[\\[{]([\\d\\?]+)[\\]}]( \\d{1,2}:\\d\\d:\\d\\d [AP]M)?\\s+" +     //messageId
                         "(\\w)\\s+" +                                                  //code
                         "([\\w\\/]+)\\s+" +                                            //type
-                        "(.*)";                                                        //message
+                        "(.*)";                                                        //body
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(inputLine);
         if (matcher.find()) {

@@ -102,7 +102,7 @@
       <file leaf-file-name="Application.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="46" selection-start="2263" selection-end="2263" vertical-scroll-proportion="0.0">
+            <state line="65" column="68" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,7 +111,7 @@
       <file leaf-file-name="ApplicationTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/ApplicationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="75" selection-start="1794" selection-end="1794" vertical-scroll-proportion="0.82758623">
+            <state line="41" column="62" selection-start="1966" selection-end="1966" vertical-scroll-proportion="0.67487687">
               <folding />
             </state>
           </provider>
@@ -476,14 +476,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="46" selection-start="2263" selection-end="2263" vertical-scroll-proportion="0.0">
+        <state line="65" column="68" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ApplicationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="75" selection-start="1794" selection-end="1794" vertical-scroll-proportion="0.82758623">
+        <state line="41" column="62" selection-start="1966" selection-end="1966" vertical-scroll-proportion="0.67487687">
           <folding />
         </state>
       </provider>

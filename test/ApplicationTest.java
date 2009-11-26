@@ -34,7 +34,7 @@ public class ApplicationTest extends FunctionalTest {
 
     @Test
     public void testParsingWeirdSyntaxLine() throws Exception {
-        Message message = Application.extractMessage("2001-09-11 22:40:32 Metrocall [1305447] 7:41:49 PM B  ALPHA  Please call Robert Dereal with the LA Times ----- another number 510-708-3223    [W/C] (1/1)");
+        Message message = Application.extractMessage("2001-09-11 22:40:32 Metrocall [1305447] 17:41:49 PM B  ALPHA  Please call Robert Dereal with the LA Times ----- another number 510-708-3223    [W/C] (1/1)");
         //assertThat(message.timestamp, is(equalTo(new Date(0))));
         assertThat(message.network, is(equalTo("Metrocall")));
         assertThat(message.messageId, is(equalTo("1305447")));
