@@ -62,7 +62,13 @@ public class Application extends Controller {
 
     public static Message extractMessage(String inputLine) throws ParseException {
         Message message = null;
-        Pattern pattern = Pattern.compile("(\\d\\d\\d\\d-\\d\\d-\\d\\d \\d\\d:\\d\\d:\\d\\d)\\s+(\\w+)\\s+[\\[{](\\d+)[\\]}]\\s+(\\w)\\s+([\\w\\/]+)\\s+(.*)");
+        String regex =  "(\\d\\d\\d\\d-\\d\\d-\\d\\d \\d\\d:\\d\\d:\\d\\d)\\s+" +      //date
+                        "(\\w+)\\s+" +                                                 //network
+                        "[\\[{]([\\d\\?]+)[\\]}]\\s+" +                                //messageId
+                        "(\\w)\\s+" +                                                  //code
+                        "([\\w\\/]+)\\s+" +                                            //type
+                        "(.*)";                                                        //message
+        Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(inputLine);
         if (matcher.find()) {
             message = new Message(formatAsDate(matcher.group(1)),matcher.group(2), matcher.group(3), matcher.group(4), matcher.group(5),matcher.group(6));
